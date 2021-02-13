@@ -14,6 +14,9 @@ const mongoose = require("mongoose");
 //connection to db
 mongoose.set("useFindAndModify", false);
 mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true, useUnifiedTopology: true }, () => {
+  
+  
+  // använd if och err för att fånga error innan man skickas vidare till appen.
 console.log("Connected to db!");
 app.listen(5000, () => console.log("Server Up and running"));
 });
